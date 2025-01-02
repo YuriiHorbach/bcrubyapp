@@ -10,12 +10,31 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <nav>
-      <%= link_to 'Home', root_path %>
-      <%= link_to 'About', about_path %>
-      <%= link_to 'Contact us', contact_us_path %>
-    </nav>
-    <%= yield %>
-  </body>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><%= link_to 'Home', root_path, class: "nav-link active" %></li>
+        <li class="nav-item"><%= link_to 'About', about_path, class: "nav-link" %></li>
+        <li class="nav-item"><%= link_to 'Contact', contact_us_path, class: "nav-link" %></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <%= yield %>
+
+  <footer class="small text-muted">
+    <div class="container">
+      <hr>
+      <center>
+        <p>&copy; 2025 One Month</p>
+      </center>
+    </div>
+  </footer>
+</body>
+
 </html>
