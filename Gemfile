@@ -67,5 +67,6 @@ group :test do
 end
 
 gem 'bootstrap'
+gem 'devise'
 gem 'mini_racer'
 gem 'sassc-rails'
